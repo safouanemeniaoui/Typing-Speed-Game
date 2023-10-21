@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-color: #2196f3;
+  --second-color: #009688;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: #eee;
+}
+
+.container {
+  margin: 30px auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+h1 {
+  text-transform: capitalize;
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 5px 1px #959595;
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: 20px;
+  }
+}
+.container > p {
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  .container > p {
+    font-size: 14px;
+  }
+}
+.container > p span {
+  color: var(--second-color);
+  font-weight: bold;
+}
+.game-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+@media (max-width: 991px) {
+  .game-content {
+    flex-direction: column;
+  }
+}
+/* Start Game Box */
+[name="levels"] {
+  width: 100%;
+  padding: 15px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  text-align: center;
+}
+.game-content .game-box {
+  flex-basis: 70%;
+  background-color: #e3e3e3;
+  padding: 10px;
+}
+@media (max-width: 991px) {
+  .game-content .game-box {
+    width: 100%;
+  }
+}
+.game-content .game-box .start-btn {
+  padding: 20px;
+  width: 100%;
+  background-color: var(--second-color);
+  color: white;
+  font-weight: bold;
+  border: none;
+  text-transform: capitalize;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.game-content .game-box .word-to-write {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--main-color);
+  text-transform: capitalize;
+}
+.game-content .game-box .error {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+  text-transform: capitalize;
+  display: none;
+}
+.game-content .game-box input {
+  width: 100%;
+  border: 2px solid var(--main-color);
+  padding: 10px;
+  caret-color: var(--main-color);
+  margin-top: 15px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: var(--main-color);
+}
+.game-content .game-box .word-list {
+  width: 100%;
+  background-color: white;
+  margin-top: 15px;
+  padding: 20px;
+  text-align: center;
+}
+.game-content .game-box .word-list p {
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.game-content .game-box .word-list span {
+  display: inline-block;
+  background-color: var(--main-color);
+  color: white;
+  padding: 0 5px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+.game-content .game-box .counter-score {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin-top: 10px;
+  padding: 10px 20px;
+  text-transform: capitalize;
+}
+.game-content .game-box .counter-score span {
+  color: var(--second-color);
+  font-weight: bold;
+}
+.game-content .game-box .message {
+  font-size: 40px;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.game-content .game-box .reset {
+  display: none;
+  padding: 10px 15px;
+  margin: 20px auto 0 auto;
+  width: fit-content;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border: none;
+  text-transform: capitalize;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.game-content .game-box .instructions {
+  background-color: white;
+  margin-top: 10px;
+  padding: 20px;
+}
+.game-content .game-box .instructions h3 {
+  text-transform: capitalize;
+}
+.game-content .game-box .instructions h3 span {
+  color: var(--second-color);
+}
+.game-content .game-box .instructions ul {
+  display: none;
+}
+.game-content .game-box .instructions ul li span {
+  color: var(--second-color);
+  font-weight: bold;
+}
+.game-content .game-box .instructions ul {
+  list-style: circle;
+  padding-left: 30px;
+}
+/* End Game Box */
+/* Start Scores List */
+
+.game-content .scores-list {
+  flex: 1;
+  margin-left: 20px;
+  background-color: #e3e3e3;
+  padding: 10px;
+}
+@media (max-width: 991px) {
+  .game-content .scores-list {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+.game-content .scores-list table {
+  border-spacing: 0;
+  width: 100%;
+}
+.game-content .scores-list table thead {
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px;
+  text-transform: capitalize;
+}
+.game-content .scores-list table thead th {
+  text-align: start;
+  padding-left: 15px;
+  font-size: 16px;
+}
+.game-content .scores-list table thead th:not(last-of-type) {
+  border-right: 1px solid white;
+}
+.game-content .scores-list table tbody td {
+  padding-left: 15px;
+  border-bottom: 1px solid var(--main-color);
+  border-left: 1px solid var(--main-color);
+  text-transform: capitalize;
+}
+.game-content .scores-list table tbody td:last-of-type {
+  border-right: 1px solid var(--main-color);
+}
+.game-content .scores-list button {
+  display: block;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  text-transform: capitalize;
+  border: none;
+  margin: 10px auto;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* End Scores List */

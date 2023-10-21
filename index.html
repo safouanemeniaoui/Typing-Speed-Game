@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap"
+      rel="stylesheet"
+    />
+    <title>Create Typing Speed Test Game</title>
+  </head>
+  <body>
+    <div class="game">
+      <h1>typing speed test game</h1>
+      <div class="container">
+        <p>no instructions - choose level</p>
+        <div class="game-content">
+          <div class="game-box">
+            <select name="levels">
+              <option value="no" data-set="0">choose level</option>
+              <option value="easy" data-set="5">easy</option>
+              <option value="medium" data-set="4">medium</option>
+              <option value="hard" data-set="3">hard</option>
+            </select>
+            <button class="start-btn">start playing</button>
+            <div class="error">text</div>
+            <div class="word-to-write"></div>
+            <input type="text" name="main-input" class="main-input" />
+            <div class="word-list">
+              <p>words will show here</p>
+            </div>
+            <div class="counter-score">
+              <p>time left: <span class="counter time">0</span> secondes</p>
+              <p>
+                score : <span class="score">0</span> from
+                <span class="total">0</span>
+              </p>
+            </div>
+            <div class="message"></div>
+            <button class="reset">reset</button>
+            <div class="instructions">
+              <h3>no instructions</h3>
+              <ul>
+                <li>You will be presented with <span>20</span> words.</li>
+                <li>
+                  You have <span class="time"></span> secondes for each word.
+                </li>
+                <li>
+                  For the first word you will have <span>3</span> secondes more.
+                </li>
+                <li>
+                  Type each word exactly as it appears ( small or capital
+                  letters are the same ).
+                </li>
+                <li>
+                  Complete all the words or sentences to finish the Level.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="scores-list">
+            <table>
+              <thead>
+                <tr>
+                  <th>level</th>
+                  <th>score</th>
+                  <th>date</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <button class="clear">clear</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
