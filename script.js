@@ -230,6 +230,7 @@ function changeWord(table = []) {
           resetBtn.style.display = "block";
           saveLocal(levels.value, score.textContent);
           createRow(levels.value, score.textContent, getDate());
+          mainInput.setAttributeNode(disabled);
         }
         if (state == false) {
           wordToWrite.innerHTML = randomWord(newTable);
@@ -243,6 +244,7 @@ function changeWord(table = []) {
       resetBtn.style.display = "block";
       saveLocal(levels.value, score.textContent);
       createRow(levels.value, score.textContent, getDate());
+      mainInput.setAttributeNode(disabled);
     }
   }, 1000);
 }
